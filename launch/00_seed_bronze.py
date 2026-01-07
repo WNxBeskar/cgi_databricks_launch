@@ -45,17 +45,3 @@ print(data_path)
 # COMMAND ----------
 
 dbutils.fs.cp(data_path, "/Volumes/workspace/bronze_layer/landing/", recurse=True)
-
-# COMMAND ----------
-
-# DBTITLE 1,SILVER
-# MAGIC %sql
-# MAGIC CREATE SCHEMA IF NOT EXISTS silver_layer;
-# MAGIC CREATE VOLUME IF NOT EXISTS silver_layer.currated;
-
-# COMMAND ----------
-
-# DBTITLE 1,GOLD
-# MAGIC %sql
-# MAGIC CREATE SCHEMA IF NOT EXISTS gold_layer;
-# MAGIC CREATE VOLUME IF NOT EXISTS gold_layer.aggeragated; 
